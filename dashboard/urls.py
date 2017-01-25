@@ -1,6 +1,9 @@
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
-urlpatterns = patterns('',
-    url(r'^profile/$', 'dashboard.views.profile', name='profile'),
-    url(r'^apikeys/$', 'dashboard.views.apikeys', name='apikeys'),
-)
+from dashboard.views import profile, apikeys
+
+
+urlpatterns = [
+    url(r'^profile/$', profile, name='profile'),
+    url(r'^apikeys/$', apikeys, name='apikeys'),
+]

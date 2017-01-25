@@ -1,20 +1,24 @@
-from django.conf.urls import patterns, url
-from accounts.forms import LoginForm
+from django.conf.urls import url
+from django.contrib.auth.views import login, logout
 
-urlpatterns = patterns('',
+from accounts.forms import LoginForm
+from accounts.views import register, activate
+
+
+urlpatterns = [
     url(r'^login/$',
-        'django.contrib.auth.views.login',
+        login,
         {
             'template_name': 'accounts/login.djhtml',
             'authentication_form': LoginForm,
         },
         name = 'login'),
     url(r'^logout/$',
-        'django.contrib.auth.views.logout',
+        logout,
         {
             'next_page': 'home',
         },
         name='logout'),
-    url(r'^register/$', 'accounts.views.register', name='register'),
-    url(r'^activate/$', 'accounts.views.activate', name='activate'),
-)
+    url(r'^register/$', register, name='register'),
+    url(r'^activate/$', activate, name='activate'),
+]
