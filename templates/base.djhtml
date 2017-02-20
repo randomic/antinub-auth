@@ -9,8 +9,8 @@
     <title>[A-NI] - {% block title %}BASE TEMPLATE{% endblock title %}</title>
 
     <!-- Bootstrap -->
-    <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/flatly/bootstrap.min.css" rel="stylesheet">
-    
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-+ENW/yibaokMnme+vBLnHMphUYxHs34h9lpdbSLuAwGkOKFRl4C34WkjazBtb7eT" crossorigin="anonymous">
+
     <!-- Custom styles for this template -->
     <link href="{% static 'css/offcanvas.css' %}" rel="stylesheet">
 
@@ -25,7 +25,7 @@
     <!-- Page tags for active link highlighting -->
     <span id="_pageName" style="display: none;">{% block pageName %}{% endblock %}</span>
     <span id="_subPageName" style="display: none;">{% block subPageName %}{% endblock %}</span>
-    
+
     <nav class="navbar navbar-default" style="border-radius: 0px !important;">
       <div class="container">
         <div class="navbar-header">
@@ -39,7 +39,7 @@
           <a class="navbar-brand visible-xs-block visible-sm-block" href="/">[A-NI]</a>
           <a class="navbar-brand visible-md-block visible-lg-block" href="/">Anti-Nub Incorporated</a>
         </div><!-- navbar-header -->
-        
+
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <!-- MAIN LINKS AT THE TOP OF THE PAGE -->
@@ -55,7 +55,7 @@
               </a></li>
             {% endif %}
           </ul>
-          
+
           <ul class="nav navbar-nav navbar-right">
             {% if user.is_authenticated %}
               <li><a href="{% url 'logout' %}">
@@ -71,16 +71,16 @@
             {% endif %}
           </ul>
         </div><!-- navbar-collapse -->
-      </div><!-- container -->      
+      </div><!-- container -->
     </nav>
-    
+
     <div class="container">
       <div class="row row-offcanvas row-offcanvas-left">
-        <div class="col-xs-11 col-sm-4 sidebar-offcanvas" id="sidebar">
+        <div class="col-xs-9 col-sm-4 sidebar-offcanvas" id="sidebar">
           {% block sidebar %}{% endblock sidebar %}
         </div><!-- col -->
-        
-        <div class="col-xs-12 col-sm-8">
+
+        <div class="col-xs-10 col-sm-8">
           <p class="pull-left visible-xs">
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">
               <span class="sr-only">Toggle sidebar</span>
@@ -90,20 +90,21 @@
           {% block content %}{% endblock content %}
         </div><!-- col -->
       </div><!-- row -->
-      
+
       <hr>
       <footer>
         <p class="text-right">This site is a deployment of <a href="https://github.com/randomic/antinub-auth">antinub-auth</a>, which is available under the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p>
+      </footer>
     </div><!-- container -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="https://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-    
+
     <script src="{% static 'js/offcanvas.js' %}"></script>
     <script src="{% static 'js/activenav.js' %}"></script>
   </body>
