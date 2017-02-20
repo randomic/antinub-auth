@@ -12,7 +12,7 @@ urlpatterns = [
             'template_name': 'accounts/login.djhtml',
             'authentication_form': LoginForm,
         },
-        name = 'login'),
+        name='login'),
     url(r'^logout/$',
         logout,
         {
