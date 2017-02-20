@@ -32,25 +32,27 @@ footer {
 
   .row-offcanvas-right
   .sidebar-offcanvas {
-    right: -91.67%; /* 11 columns */
+    right: -90%; /* 9 columns */
   }
 
   .row-offcanvas-left
   .sidebar-offcanvas {
-    left: -91.67%; /* 11 columns */
+    left: -90%; /* 9 columns */
   }
 
   .row-offcanvas-right.active {
-    right: 91.67%; /* 11 columns */
+    right: 90%; /* 9 columns */
   }
 
   .row-offcanvas-left.active {
-    left: 91.67%; /* 11 columns */
+    left: 90%; /* 9 columns */
   }
 
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
-    width: 91.67%; /* 11 columns */
+    padding-right: 0;
+    padding-left: 42px;
+    width: 90%; /* 9 columns */
   }
 }
